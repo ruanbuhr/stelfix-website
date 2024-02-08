@@ -1,0 +1,23 @@
+.inputfield {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3 -15px);
+  color: #2e2e2e;
+}
+
+.input {
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid #aaa;
+  padding: 15px;
+  margin: 8px 0;
+  height: 50px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.input:focus {
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.4);
+}

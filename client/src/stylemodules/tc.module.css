@@ -1,0 +1,17 @@
+.container {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.container h1 {
+  align-self: center;
+}
+
+.container h3 {
+  align-self: center;
+}
+
+.link {
+  color: black;
+}

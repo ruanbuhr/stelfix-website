@@ -1,0 +1,76 @@
+.headercontainer {
+  text-align: center;
+  margin: 40px;
+}
+
+.headercontainer h1 {
+  font-size: 3.5rem;
+}
+
+.headercontainer h3 {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.buttoncontainer {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+Button {
+  margin: 10px;
+}
+
+.infocontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infocontainer h2 {
+  margin-top: 70px;
+}
+
+.infocardcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infocard {
+  width: 75%;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.infocard:hover {
+  transform: translate(-10px, -10px);
+}
+
+.infocard div {
+  display: flex;
+}
+
+.infocard img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.infocard p {
+  color: #888;
+}
+
+.icon {
+  font-size: 3rem;
+  align-self: center;
+  color: #800020;
+  margin-right: 15px;
+}

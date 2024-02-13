@@ -6,6 +6,10 @@ import { useState } from "react";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  function closeMenu(e) {
+    setMenuOpen(false);
+  }
+
   return (
     <nav>
       <Link to="/">
@@ -27,19 +31,29 @@ export default function Header() {
 
       <ul className={menuOpen ? styles.open : ""}>
         <li>
-          <Link to="/repair">Repair</Link>
+          <Link to="/repair" onClick={closeMenu}>
+            Repair
+          </Link>
         </li>
         <li>
-          <Link to="/pricing">Pricing</Link>
+          <Link to="/pricing" onClick={closeMenu}>
+            Pricing
+          </Link>
         </li>
         <li>
-          <Link to="/buysell">Buy/Sell</Link>
+          <Link to="/buysell" onClick={closeMenu}>
+            Buy/Sell
+          </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about" onClick={closeMenu}>
+            About
+          </Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" onClick={closeMenu}>
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>

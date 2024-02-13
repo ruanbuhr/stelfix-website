@@ -5,18 +5,17 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-
 app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const transporter = nodemailer.createTransport({
-  host: "mail.stelfix.co.za",
+  host: "smtp.gmail.com",
   port: 465,
   secure: true,
   auth: {
-    user: "no-reply@stelfix.co.za",
+    user: "stelfix.business@gmail.com",
     pass: process.env.EMAIL_PASSWORD,
   },
 });
@@ -34,7 +33,7 @@ app.post("/send-message", (req, res) => {
     `;
 
   const mailOptions = {
-    from: '"Stelfix Message" <no-reply@stelfix.co.za>',
+    from: '"Stelfix Message" <stelfix.business@gmail.com>',
     to: "ruanbuhr1234@gmail.com",
     subject: "Customer Message",
     html: emailContent,
@@ -65,7 +64,7 @@ app.post("/send-repair", (req, res) => {
     `;
 
   const mailOptions = {
-    from: '"Stelfix Repair" <no-reply@stelfix.co.za>',
+    from: '"Stelfix Repair" <stelfix.business@gmail.com>',
     to: "ruanbuhr1234@gmail.com",
     subject: "Repair Request",
     html: emailContent,
@@ -98,7 +97,7 @@ app.post("/send-buysell", (req, res) => {
     `;
 
   const mailOptions = {
-    from: '"Stelfix Buy/Sell" <no-reply@stelfix.co.za>',
+    from: '"Stelfix Buy/Sell" <stelfix.business@gmail.com>',
     to: "ruanbuhr1234@gmail.com",
     subject: "Buy/Sell Order",
     html: emailContent,

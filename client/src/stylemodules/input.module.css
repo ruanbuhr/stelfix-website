@@ -15,7 +15,7 @@
   height: 50px;
   box-sizing: border-box;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .input:focus {

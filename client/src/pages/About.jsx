@@ -60,7 +60,7 @@ export default function About() {
           <div className={styles.title}>
             <img
               className={styles.profileimage}
-              src="../../assets/elton-jantjies.webp"
+              src="../../assets/ruan_buhr.png"
             ></img>
             <div className={styles.profiledetails}>
               <h2>Ruan Buhr</h2>
@@ -74,9 +74,9 @@ export default function About() {
             coding and data analytics, Ruan enjoys an active lifestyle, aligning
             a commitment to health with the demands of the digital world. A
             lover of knowledge, Ruan finds interest in a good thought provoking
-            non-fiction book. This versatile approach is pivotal in shaping
-            Stelfix's online identity, ensuring technology is accessible and
-            user-friendly for all.
+            book. This versatile approach is pivotal in shaping Stelfix's online
+            identity, ensuring technology is accessible and user-friendly for
+            all.
           </p>
         </div>
       </div>

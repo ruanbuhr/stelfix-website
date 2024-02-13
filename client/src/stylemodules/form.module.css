@@ -30,6 +30,8 @@
 
 .details {
   margin: 20px 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -48,4 +50,10 @@
   margin: 50px;
   display: flex;
   justify-content: flex-start;
+}
+
+.addresstext {
+  margin: 20px 0;
+  color: #888;
+  font-size: 1rem;
 }

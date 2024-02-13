@@ -33,13 +33,13 @@ export default function Repair() {
       .then((response) => response.json())
       .then((data) => {
         setStatus(
-          "Message has been submitted successfully. We will correspond with you shortly."
+          "Request has been submitted successfully. We will correspond with you shortly."
         );
         setShowStatus(true);
       })
       .catch((error) => {
         setStatus(
-          "An error occurred while submitting the message. Please try again later."
+          "An error occurred while submitting the request. Please try again later."
         );
         setShowStatus(true);
       });
@@ -109,6 +109,10 @@ export default function Repair() {
 
         <div className={styles.details}>
           <span className={styles.title}>Address and Date</span>
+          <span className={styles.addresstext}>
+            If you want us to pick up and deliver your device please enter the
+            following:
+          </span>
           <div className={styles.fields}>
             <Input
               title="Address Line 1"
@@ -116,7 +120,7 @@ export default function Repair() {
               detail={details.addr1}
               property="addr1"
               setDetails={setDetails}
-              required={true}
+              required={false}
             />
             <Input
               title="Address Line 2"
@@ -124,7 +128,7 @@ export default function Repair() {
               detail={details.addr2}
               property="addr2"
               setDetails={setDetails}
-              required={true}
+              required={false}
             />
             <Input
               title="Address Line 3"
@@ -140,7 +144,7 @@ export default function Repair() {
               detail={details.date}
               property="date"
               setDetails={setDetails}
-              required={true}
+              required={false}
             />
           </div>
         </div>

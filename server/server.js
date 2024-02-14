@@ -21,12 +21,12 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post("/send-message", (req, res) => {
-  const { name, surname, email, message } = req.body;
+  const { name, number, email, message } = req.body;
 
   const emailContent = `
     <ul>
       <li><strong>Name:</strong> ${name}</li>
-      <li><strong>Surname:</strong> ${surname}</li>
+      <li><strong>Number:</strong> ${number}</li>
       <li><strong>Email:</strong> ${email}</li>
       <li><strong>Message:</strong> ${message}</li>
     </ul>
@@ -48,15 +48,17 @@ app.post("/send-message", (req, res) => {
 });
 
 app.post("/send-repair", (req, res) => {
-  const { name, surname, email, device, date, addr1, addr2, addr3 } = req.body;
+  const { name, number, email, device, screen, battery, addr1, addr2, addr3 } =
+    req.body;
 
   const emailContent = `
     <ul>
       <li><strong>Name:</strong> ${name}</li>
-      <li><strong>Surname:</strong> ${surname}</li>
+      <li><strong>Number:</strong> ${number}</li>
       <li><strong>Email:</strong> ${email}</li>
       <li><strong>Device:</strong> ${device}</li>
-      <li><strong>Date:</strong> ${date}</li>
+      <li><strong>Screen:</strong> ${screen}</li>
+      <li><strong>Battery:</strong> ${battery}</li>
       <li><strong>Address Line 1:</strong> ${addr1}</li>
       <li><strong>Address Line 2:</strong> ${addr2}</li>
       <li><strong>Address Line 3:</strong> ${addr3}</li>
@@ -79,17 +81,16 @@ app.post("/send-repair", (req, res) => {
 });
 
 app.post("/send-buysell", (req, res) => {
-  const { buysell, name, surname, email, device, date, addr1, addr2, addr3 } =
+  const { buysell, name, number, email, device, addr1, addr2, addr3 } =
     req.body;
 
   const emailContent = `
     <ul>
       <li><strong>Buy/Sell:</strong> ${buysell}</li>
       <li><strong>Name:</strong> ${name}</li>
-      <li><strong>Surname:</strong> ${surname}</li>
+      <li><strong>Number:</strong> ${number}</li>
       <li><strong>Email:</strong> ${email}</li>
       <li><strong>Device:</strong> ${device}</li>
-      <li><strong>Date:</strong> ${date}</li>
       <li><strong>Address Line 1:</strong> ${addr1}</li>
       <li><strong>Address Line 2:</strong> ${addr2}</li>
       <li><strong>Address Line 3:</strong> ${addr3}</li>

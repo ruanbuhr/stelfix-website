@@ -25,7 +25,7 @@
   height: 3px;
   width: 27px;
   border-radius: 8px;
-  background-color: #800020;
+  background-color: #7ecddd;
 }
 
 .details {
@@ -56,4 +56,10 @@
   margin: 20px 0;
   color: #888;
   font-size: 1rem;
+}
+
+@media (max-width: 950px) {
+  .buttoncontainer {
+    justify-content: center;
+  }
 }

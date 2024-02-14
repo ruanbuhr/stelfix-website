@@ -4,14 +4,16 @@ import Input from "../components/Input";
 import SelectDevice from "../components/SelectDevice";
 import Button from "../components/Button";
 import StatusMessage from "../components/StatusMessage";
+import Checkbox from "../components/Checkbox";
 
 export default function Repair() {
   const [details, setDetails] = useState({
     name: "",
-    surname: "",
+    number: "",
     email: "",
     device: "",
-    date: "",
+    screen: "",
+    battery: "",
     addr1: "",
     addr2: "",
     addr3: "",
@@ -46,10 +48,11 @@ export default function Repair() {
 
     setDetails({
       name: "",
-      surname: "",
+      number: "",
       email: "",
       device: "",
-      date: "",
+      screen: "",
+      battery: "",
       addr1: "",
       addr2: "",
       addr3: "",
@@ -76,10 +79,10 @@ export default function Repair() {
               required={true}
             />
             <Input
-              title="Surname"
-              type="text"
-              detail={details.surname}
-              property="surname"
+              title="Cell Number"
+              type="tel"
+              detail={details.number}
+              property="number"
               setDetails={setDetails}
               required={true}
             />
@@ -104,11 +107,25 @@ export default function Repair() {
               setDetails={setDetails}
               required={true}
             />
+            <Checkbox
+              title="Screen"
+              detail={details.screen}
+              property="screen"
+              setDetails={setDetails}
+              required={false}
+            />
+            <Checkbox
+              title="Battery"
+              detail={details.battery}
+              property="battery"
+              setDetails={setDetails}
+              required={false}
+            />
           </div>
         </div>
 
         <div className={styles.details}>
-          <span className={styles.title}>Address and Date</span>
+          <span className={styles.title}>Address</span>
           <span className={styles.addresstext}>
             If you want us to pick up and deliver your device please enter the
             following:
@@ -135,14 +152,6 @@ export default function Repair() {
               type="text"
               detail={details.addr3}
               property="addr3"
-              setDetails={setDetails}
-              required={false}
-            />
-            <Input
-              title="Date"
-              type="date"
-              detail={details.date}
-              property="date"
               setDetails={setDetails}
               required={false}
             />

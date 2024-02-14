@@ -10,10 +10,9 @@ export default function BuySell() {
   const [details, setDetails] = useState({
     buysell: "",
     name: "",
-    surname: "",
+    number: "",
     email: "",
     device: "",
-    date: "",
     addr1: "",
     addr2: "",
     addr3: "",
@@ -49,10 +48,9 @@ export default function BuySell() {
     setDetails({
       buysell: "",
       name: "",
-      surname: "",
+      number: "",
       email: "",
       device: "",
-      date: "",
       addr1: "",
       addr2: "",
       addr3: "",
@@ -79,10 +77,10 @@ export default function BuySell() {
               required={true}
             />
             <Input
-              title="Surname"
-              type="text"
-              detail={details.surname}
-              property="surname"
+              title="Cell Number"
+              type="number"
+              detail={details.number}
+              property="number"
               setDetails={setDetails}
               required={true}
             />
@@ -123,7 +121,7 @@ export default function BuySell() {
         </div>
 
         <div className={styles.details}>
-          <span className={styles.title}>Address and Date</span>
+          <span className={styles.title}>Address</span>
           <span className={styles.addresstext}>
             If you want us to pick up or deliver your device please enter the
             following:
@@ -150,14 +148,6 @@ export default function BuySell() {
               type="text"
               detail={details.addr3}
               property="addr3"
-              setDetails={setDetails}
-              required={false}
-            />
-            <Input
-              title="Date"
-              type="date"
-              detail={details.date}
-              property="date"
               setDetails={setDetails}
               required={false}
             />

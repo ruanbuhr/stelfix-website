@@ -8,7 +8,7 @@ import StatusMessage from "../components/StatusMessage";
 export default function Contact() {
   const [details, setDetails] = useState({
     name: "",
-    surname: "",
+    number: "",
     email: "",
     message: "",
   });
@@ -42,7 +42,7 @@ export default function Contact() {
 
     setDetails({
       name: "",
-      surname: "",
+      number: "",
       email: "",
       message: "",
     });
@@ -68,10 +68,10 @@ export default function Contact() {
               required={true}
             />
             <Input
-              title="Surname"
-              type="text"
-              detail={details.surname}
-              property="surname"
+              title="Cell Number"
+              type="number"
+              detail={details.number}
+              property="number"
               setDetails={setDetails}
               required={true}
             />

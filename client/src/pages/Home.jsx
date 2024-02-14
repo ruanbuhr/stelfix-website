@@ -10,7 +10,7 @@ export default function Home() {
     <div className={styles.home}>
       <div className={styles.headercontainer}>
         <h1>Welcome to Stelfix</h1>
-        <h3>Your Trusted iPhone Repair Experts in Stellenbosch</h3>
+        <h3>iStellenbosch</h3>
       </div>
       <div className={styles.buttoncontainer}>
         <Link to="/repair">
@@ -20,55 +20,38 @@ export default function Home() {
           <Button text="Buy/Sell iPhones" type="button" />
         </Link>
       </div>
-      <div className={styles.infocontainer}>
-        <h2>What we offer</h2>
-        <div className={styles.infocardcontainer}>
+      <div className={styles.info}>
+        <div className={styles.infocontainer}>
           <div className={styles.infocard}>
-            <div>
-              <BsPhone className={styles.icon} />
-              <h3>Quality iPhone Repairs</h3>
+            <img src="../assets/iphone-repair.jpg" alt="iPhone Repair" />
+            <div className={styles.infocardtext}>
+              <h2>Quality iPhone Repairs</h2>
+              <p>
+                At Stelfix, we excel in repairing iPhone screens and batteries,
+                ensuring your device is returned to pristine condition by our
+                dedicated technicians."
+              </p>
             </div>
-            <p>
-              At Stelfix we specialize in repairing iPhone screens and
-              batteries. Our skilled technicians are committed to providing
-              top-notch services, ensuring your beloved iPhone is in prestine
-              condition.
-            </p>
           </div>
           <div className={styles.infocard}>
-            <div>
-              <LuWrench className={styles.icon} />
-              <h3>Fast and Reliable Service</h3>
+            <img src="../assets/buy-iphone.jpg" alt="Buy iPhone" />
+            <div className={styles.infocardtext}>
+              <h2>Buy and Sell iPhones</h2>
+              <p>
+                Discover our selection of pre-owned iPhones for purchase or
+                trade-in your unwanted phones hassle-free to earn cash!
+              </p>
             </div>
-            <p>
-              We understand the importance of your iPhone in your daily life.
-              That's why we offer one day repair services to get your device
-              back in your hands with in 24 hours. Whether it's a cracked screen
-              or a battery replacement, we've got you covered.
-            </p>
           </div>
           <div className={styles.infocard}>
-            <div>
-              <LuShoppingCart className={styles.icon} />
-              <h3>Buy and Sell iPhones</h3>
+            <img src="../assets/website.jpeg" alt="Website" />
+            <div className={styles.infocardtext}>
+              <h2>Easy Online Interaction</h2>
+              <p>
+                Easily request repairs or inquire about our products online with
+                our user-friendly website, simplifying your assistance process.
+              </p>
             </div>
-            <p>
-              Looking for a new iPhone or wanting to upgrade? Find out about our
-              selection of second-hand iPhones available for purchase. We also
-              offer a hassle-free platform for you to sell your unwanted phones.
-              Turn your old devices into cash!
-            </p>
-          </div>
-          <div className={styles.infocard}>
-            <div>
-              <CgWebsite className={styles.icon} />
-              <h3>Easy Online Interaction</h3>
-            </div>
-            <p>
-              For your convenience, you can request a repair or inquire about
-              our products online. Our user-friendly website makes it simple to
-              get the assistance you need.
-            </p>
           </div>
         </div>
       </div>

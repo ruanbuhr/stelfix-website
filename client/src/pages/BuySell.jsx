@@ -10,8 +10,8 @@ export default function BuySell() {
   const [details, setDetails] = useState({
     buysell: "",
     name: "",
+    id: "",
     number: "",
-    email: "",
     device: "",
     addr1: "",
     addr2: "",
@@ -48,8 +48,8 @@ export default function BuySell() {
     setDetails({
       buysell: "",
       name: "",
+      id: "",
       number: "",
-      email: "",
       device: "",
       addr1: "",
       addr2: "",
@@ -77,18 +77,18 @@ export default function BuySell() {
               required={true}
             />
             <Input
-              title="Cell Number"
-              type="number"
-              detail={details.number}
-              property="number"
+              title="ID Number"
+              type="Text"
+              detail={details.id}
+              property="id"
               setDetails={setDetails}
               required={true}
             />
             <Input
-              title="e-mail"
-              type="email"
-              detail={details.email}
-              property="email"
+              title="Cell Number"
+              type="number"
+              detail={details.number}
+              property="number"
               setDetails={setDetails}
               required={true}
             />
@@ -108,7 +108,7 @@ export default function BuySell() {
         </div>
 
         <div className={styles.details}>
-          <span className={styles.title}>Device to Buy/Sell</span>
+          <span className={styles.title}>Device</span>
           <div className={styles.fields}>
             <SelectDevice
               title="Model"

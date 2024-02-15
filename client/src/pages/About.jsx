@@ -39,7 +39,7 @@ export default function About() {
           <div className={styles.title}>
             <img
               className={styles.profileimage}
-              src="../../assets/elton-jantjies.webp"
+              src="../../assets/daniel-maree.png"
             ></img>
             <div className={styles.profiledetails}>
               <h2>Daniel Maree</h2>

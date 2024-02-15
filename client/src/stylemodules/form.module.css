@@ -47,15 +47,22 @@
 }
 
 .buttoncontainer {
-  margin: 50px;
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: flex-start;
 }
 
 .addresstext {
-  margin: 20px 0;
+  margin: 15px 0;
   color: #888;
   font-size: 1rem;
+}
+
+.privacypolicy {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 950px) {

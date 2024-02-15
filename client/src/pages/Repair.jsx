@@ -4,11 +4,13 @@ import Input from "../components/Input";
 import SelectDevice from "../components/SelectDevice";
 import Button from "../components/Button";
 import StatusMessage from "../components/StatusMessage";
-import Checkbox from "../components/Checkbox";
+import YesNo from "../components/YesNo";
+import CheckBox from "../components/Checkbox";
 
 export default function Repair() {
   const [details, setDetails] = useState({
     name: "",
+    id: "",
     number: "",
     email: "",
     device: "",
@@ -17,6 +19,7 @@ export default function Repair() {
     addr1: "",
     addr2: "",
     addr3: "",
+    consent: false,
   });
 
   const [status, setStatus] = useState("");
@@ -48,6 +51,7 @@ export default function Repair() {
 
     setDetails({
       name: "",
+      id: "",
       number: "",
       email: "",
       device: "",
@@ -56,6 +60,7 @@ export default function Repair() {
       addr1: "",
       addr2: "",
       addr3: "",
+      consent: false,
     });
   }
 
@@ -75,6 +80,14 @@ export default function Repair() {
               type="text"
               detail={details.name}
               property="name"
+              setDetails={setDetails}
+              required={true}
+            />
+            <Input
+              title="ID Number"
+              type="Text"
+              detail={details.id}
+              property="id"
               setDetails={setDetails}
               required={true}
             />
@@ -107,14 +120,14 @@ export default function Repair() {
               setDetails={setDetails}
               required={true}
             />
-            <Checkbox
+            <YesNo
               title="Screen"
               detail={details.screen}
               property="screen"
               setDetails={setDetails}
               required={false}
             />
-            <Checkbox
+            <YesNo
               title="Battery"
               detail={details.battery}
               property="battery"
@@ -155,6 +168,34 @@ export default function Repair() {
               setDetails={setDetails}
               required={false}
             />
+          </div>
+        </div>
+
+        <div className={styles.details}>
+          <span className={styles.title}>Consent</span>
+          <div className={styles.addresstext}>
+            <div className={styles.privacypolicy}>
+              <CheckBox
+                title=""
+                detail={details.consent}
+                property="consent"
+                setDetails={setDetails}
+                required={false}
+              />
+              <h4>I agree to the Privacy Policy</h4>
+            </div>
+            <h4>Make Sure:</h4>
+            <ol>
+              <li>that your device is backed up.</li>
+              <li>
+                you know that your device will not have a dust or water
+                resistant rating after the repair.
+              </li>
+              <li>
+                you remember your Stelfix email with your id for prove of
+                ownership.
+              </li>
+            </ol>
           </div>
         </div>
         <div className={styles.buttoncontainer}>

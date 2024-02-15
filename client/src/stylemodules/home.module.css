@@ -9,7 +9,7 @@
 
 .headercontainer h3 {
   color: #888;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .buttoncontainer {
@@ -64,5 +64,30 @@ Button {
 @media (max-width: 950px) {
   .infocontainer {
     flex-direction: column;
+  }
+
+  .headercontainer h1 {
+    font-size: 2rem;
+  }
+
+  .headercontainer h3 {
+    font-size: 1rem;
+  }
+
+  .buttoncontainer {
+    margin-top: 15px;
+  }
+
+  Button {
+    margin: 10px;
+    height: 70px;
+  }
+
+  .infocontainer {
+    margin-top: 20px;
+  }
+
+  .infocard {
+    margin: 10px;
   }
 }

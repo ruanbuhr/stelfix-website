@@ -48,20 +48,33 @@ app.post("/send-message", (req, res) => {
 });
 
 app.post("/send-repair", (req, res) => {
-  const { name, number, email, device, screen, battery, addr1, addr2, addr3 } =
-    req.body;
+  const {
+    name,
+    id,
+    number,
+    email,
+    device,
+    screen,
+    battery,
+    addr1,
+    addr2,
+    addr3,
+    consent,
+  } = req.body;
 
   const emailContent = `
     <ul>
       <li><strong>Name:</strong> ${name}</li>
+      <li><strong>ID Number:</strong> ${id}</li>
       <li><strong>Number:</strong> ${number}</li>
-      <li><strong>Email:</strong> ${email}</li>
+      <li><strong>e-mail:</strong> ${email}</li>
       <li><strong>Device:</strong> ${device}</li>
       <li><strong>Screen:</strong> ${screen}</li>
       <li><strong>Battery:</strong> ${battery}</li>
       <li><strong>Address Line 1:</strong> ${addr1}</li>
       <li><strong>Address Line 2:</strong> ${addr2}</li>
       <li><strong>Address Line 3:</strong> ${addr3}</li>
+      <li><strong>Consent:</strong> ${consent}</li>
     </ul>
     `;
 
@@ -81,15 +94,14 @@ app.post("/send-repair", (req, res) => {
 });
 
 app.post("/send-buysell", (req, res) => {
-  const { buysell, name, number, email, device, addr1, addr2, addr3 } =
-    req.body;
+  const { buysell, name, id, number, device, addr1, addr2, addr3 } = req.body;
 
   const emailContent = `
     <ul>
       <li><strong>Buy/Sell:</strong> ${buysell}</li>
       <li><strong>Name:</strong> ${name}</li>
+      <li><strong>ID Number:</strong> ${id}</li>
       <li><strong>Number:</strong> ${number}</li>
-      <li><strong>Email:</strong> ${email}</li>
       <li><strong>Device:</strong> ${device}</li>
       <li><strong>Address Line 1:</strong> ${addr1}</li>
       <li><strong>Address Line 2:</strong> ${addr2}</li>

@@ -1,4 +1,6 @@
 import styles from "../stylemodules/about.module.css";
+import daniel from "../assets/daniel-maree.png";
+import ruan from "../assets/ruan_buhr.png";
 
 export default function About() {
   return (
@@ -37,10 +39,7 @@ export default function About() {
         <h1>Meet Our Team</h1>
         <div className={styles.aboutdetails}>
           <div className={styles.title}>
-            <img
-              className={styles.profileimage}
-              src="../../assets/daniel-maree.png"
-            ></img>
+            <img className={styles.profileimage} src={daniel}></img>
             <div className={styles.profiledetails}>
               <h2>Daniel Maree</h2>
               <h3>Founder, Owner and Head Technician</h3>
@@ -58,10 +57,7 @@ export default function About() {
         </div>
         <div className={styles.aboutdetails}>
           <div className={styles.title}>
-            <img
-              className={styles.profileimage}
-              src="../../assets/ruan_buhr.png"
-            ></img>
+            <img className={styles.profileimage} src={ruan}></img>
             <div className={styles.profiledetails}>
               <h2>Ruan Buhr</h2>
               <h3>Website Developer and Head of Internet Visibility</h3>

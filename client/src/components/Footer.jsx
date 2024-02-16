@@ -1,12 +1,13 @@
 import styles from "../stylemodules/footer.module.css";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import watermark from "../assets/watermark.png";
 
 export default function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.footercontent}>
-        <img src="../../assets/watermark.png" alt="Watermark"></img>
+        <img src={watermark} alt="Watermark"></img>
         <p>
           Your premier iPhone repair shop in Stellenbosch, delivering expert
           phone repairs overnight for a seamless and efficient experience. For

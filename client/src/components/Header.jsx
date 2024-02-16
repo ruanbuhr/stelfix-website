@@ -2,6 +2,7 @@ import styles from "../stylemodules/header.module.css";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
+import logo from "../assets/stelfix_logo.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,11 +14,7 @@ export default function Header() {
   return (
     <nav>
       <Link to="/">
-        <img
-          src="../assets/stelfix_logo.png"
-          className={styles.headerimg}
-          alt="Logo"
-        ></img>
+        <img src={logo} className={styles.headerimg} alt="Logo"></img>
       </Link>
 
       <div

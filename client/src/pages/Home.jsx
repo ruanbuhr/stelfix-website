@@ -4,6 +4,9 @@ import { BsPhone } from "react-icons/bs";
 import { LuWrench, LuShoppingCart } from "react-icons/lu";
 import { CgWebsite } from "react-icons/cg";
 import Button from "../components/Button";
+import repair from "../assets/repair.jpg";
+import buysell from "../assets/buy-iphone.jpg";
+import website from "../assets/website.jpeg";
 
 export default function Home() {
   return (
@@ -23,7 +26,7 @@ export default function Home() {
       <div className={styles.info}>
         <div className={styles.infocontainer}>
           <div className={styles.infocard}>
-            <img src="../assets/repair.jpg" alt="iPhone Repair" />
+            <img src={repair} alt="iPhone Repair" />
             <div className={styles.infocardtext}>
               <h2>Quality iPhone Repairs</h2>
               <p>
@@ -34,7 +37,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.infocard}>
-            <img src="../assets/buy-iphone.jpg" alt="Buy iPhone" />
+            <img src={buysell} alt="Buy iPhone" />
             <div className={styles.infocardtext}>
               <h2>Buy and Sell iPhones</h2>
               <p>
@@ -44,7 +47,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.infocard}>
-            <img src="../assets/website.jpeg" alt="Website" />
+            <img src={website} alt="Website" />
             <div className={styles.infocardtext}>
               <h2>Easy Online Interaction</h2>
               <p>

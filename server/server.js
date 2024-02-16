@@ -6,6 +6,8 @@ require("dotenv").config();
 
 const app = express();
 app.use(cors());
+app.use(express.json());
+app.use(express.static("../client/dist"));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

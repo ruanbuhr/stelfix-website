@@ -10,8 +10,8 @@ export default function BuySell() {
   const [details, setDetails] = useState({
     buysell: "",
     name: "",
-    id: "",
     number: "",
+    email: "",
     device: "",
     addr1: "",
     addr2: "",
@@ -24,7 +24,7 @@ export default function BuySell() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("http://localhost:3001/send-buysell", {
+    fetch("http://stelfix.co.za/send-buysell", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -48,8 +48,8 @@ export default function BuySell() {
     setDetails({
       buysell: "",
       name: "",
-      id: "",
       number: "",
+      email: "",
       device: "",
       addr1: "",
       addr2: "",
@@ -66,7 +66,7 @@ export default function BuySell() {
       <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
         <h1 className={styles.header}>Buy/Sell Order</h1>
         <div className={styles.details}>
-          <span className={styles.title}>Personal Details</span>
+          <span className={styles.title}>Details</span>
           <div className={styles.fields}>
             <Input
               title="Name"
@@ -77,18 +77,18 @@ export default function BuySell() {
               required={true}
             />
             <Input
-              title="ID Number"
-              type="Text"
-              detail={details.id}
-              property="id"
-              setDetails={setDetails}
-              required={true}
-            />
-            <Input
               title="Cell Number"
               type="number"
               detail={details.number}
               property="number"
+              setDetails={setDetails}
+              required={true}
+            />
+            <Input
+              title="e-mail"
+              type="email"
+              detail={details.email}
+              property="email"
               setDetails={setDetails}
               required={true}
             />

@@ -23,7 +23,7 @@ export default function Home() {
       <div className={styles.info}>
         <div className={styles.infocontainer}>
           <div className={styles.infocard}>
-            <img src="../assets/iphone-repair.jpg" alt="iPhone Repair" />
+            <img src="../assets/repair.jpg" alt="iPhone Repair" />
             <div className={styles.infocardtext}>
               <h2>Quality iPhone Repairs</h2>
               <p>

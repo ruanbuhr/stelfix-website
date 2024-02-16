@@ -34,7 +34,7 @@ app.post("/send-message", (req, res) => {
 
   const mailOptions = {
     from: '"Stelfix Message" <stelfix.business@gmail.com>',
-    to: "ruanbuhr1234@gmail.com",
+    to: "info@stelfix.co.za",
     subject: "Customer Message",
     html: emailContent,
   };
@@ -51,7 +51,6 @@ app.post("/send-repair", (req, res) => {
   const {
     name,
     id,
-    number,
     email,
     device,
     screen,
@@ -66,7 +65,6 @@ app.post("/send-repair", (req, res) => {
     <ul>
       <li><strong>Name:</strong> ${name}</li>
       <li><strong>ID Number:</strong> ${id}</li>
-      <li><strong>Number:</strong> ${number}</li>
       <li><strong>e-mail:</strong> ${email}</li>
       <li><strong>Device:</strong> ${device}</li>
       <li><strong>Screen:</strong> ${screen}</li>
@@ -80,7 +78,7 @@ app.post("/send-repair", (req, res) => {
 
   const mailOptions = {
     from: '"Stelfix Repair" <stelfix.business@gmail.com>',
-    to: "ruanbuhr1234@gmail.com",
+    to: "info@stelfix.co.za",
     subject: "Repair Request",
     html: emailContent,
   };
@@ -94,14 +92,15 @@ app.post("/send-repair", (req, res) => {
 });
 
 app.post("/send-buysell", (req, res) => {
-  const { buysell, name, id, number, device, addr1, addr2, addr3 } = req.body;
+  const { buysell, name, number, email, device, addr1, addr2, addr3 } =
+    req.body;
 
   const emailContent = `
     <ul>
       <li><strong>Buy/Sell:</strong> ${buysell}</li>
       <li><strong>Name:</strong> ${name}</li>
-      <li><strong>ID Number:</strong> ${id}</li>
       <li><strong>Number:</strong> ${number}</li>
+      <li><strong>e-mail:</strong> ${email}</li>
       <li><strong>Device:</strong> ${device}</li>
       <li><strong>Address Line 1:</strong> ${addr1}</li>
       <li><strong>Address Line 2:</strong> ${addr2}</li>
@@ -111,7 +110,7 @@ app.post("/send-buysell", (req, res) => {
 
   const mailOptions = {
     from: '"Stelfix Buy/Sell" <stelfix.business@gmail.com>',
-    to: "ruanbuhr1234@gmail.com",
+    to: "info@stelfix.co.za",
     subject: "Buy/Sell Order",
     html: emailContent,
   };

@@ -21,7 +21,7 @@
 
 Button {
   margin: 30px;
-  height: 70px;
+  width: 200px;
 }
 
 .info {
@@ -89,5 +89,9 @@ Button {
 
   .infocard {
     margin: 10px;
+  }
+
+  .buttoncontainer {
+    flex-direction: column;
   }
 }

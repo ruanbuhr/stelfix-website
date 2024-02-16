@@ -11,7 +11,6 @@ export default function Repair() {
   const [details, setDetails] = useState({
     name: "",
     id: "",
-    number: "",
     email: "",
     device: "",
     screen: "",
@@ -28,7 +27,7 @@ export default function Repair() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("http://localhost:3001/send-repair", {
+    fetch("http://stelfix.co.za/send-repair", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -52,7 +51,6 @@ export default function Repair() {
     setDetails({
       name: "",
       id: "",
-      number: "",
       email: "",
       device: "",
       screen: "",
@@ -88,14 +86,6 @@ export default function Repair() {
               type="Text"
               detail={details.id}
               property="id"
-              setDetails={setDetails}
-              required={true}
-            />
-            <Input
-              title="Cell Number"
-              type="tel"
-              detail={details.number}
-              property="number"
               setDetails={setDetails}
               required={true}
             />

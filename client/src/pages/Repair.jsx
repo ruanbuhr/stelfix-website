@@ -27,7 +27,7 @@ export default function Repair() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("http://stelfix.co.za/send-repair", {
+    fetch("https://stelfix.co.za/send-repair", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

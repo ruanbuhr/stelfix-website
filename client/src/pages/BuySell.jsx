@@ -24,7 +24,7 @@ export default function BuySell() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("http://stelfix.co.za/send-buysell", {
+    fetch("https://stelfix.co.za/send-buysell", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

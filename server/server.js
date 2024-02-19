@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -123,6 +124,10 @@ app.post("/send-buysell", (req, res) => {
     }
     return res.status(200).json({ message: "Email sent", info: info.response });
   });
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 app.listen(process.env.PORT);

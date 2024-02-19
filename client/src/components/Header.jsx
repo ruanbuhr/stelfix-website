@@ -14,7 +14,12 @@ export default function Header() {
   return (
     <nav>
       <Link to="/">
-        <img src={logo} className={styles.headerimg} alt="Logo"></img>
+        <img
+          src={logo}
+          className={styles.headerimg}
+          alt="Logo"
+          onClick={closeMenu}
+        ></img>
       </Link>
 
       <div

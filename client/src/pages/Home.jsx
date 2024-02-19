@@ -32,7 +32,7 @@ export default function Home() {
               <p>
                 At Stelfix, we excel in repairing iPhone screens and batteries,
                 ensuring your device is returned to pristine condition by our
-                dedicated technicians."
+                dedicated technicians.
               </p>
             </div>
           </div>

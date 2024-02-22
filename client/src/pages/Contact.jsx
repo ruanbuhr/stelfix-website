@@ -19,7 +19,7 @@ export default function Contact() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("https://stelfix.co.za/send-message", {
+    fetch("https://www.stelfix.co.za/send-message", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

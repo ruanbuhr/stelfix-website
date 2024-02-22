@@ -5,8 +5,15 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 require("dotenv").config();
 
+const corsOptions = {
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+};
+
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.static("./dist"));
 

@@ -137,4 +137,8 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
+app.get("/robots.txt", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "robots.txt"));
+});
+
 app.listen(process.env.PORT);

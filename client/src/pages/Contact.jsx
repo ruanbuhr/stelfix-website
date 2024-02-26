@@ -69,7 +69,7 @@ export default function Contact() {
             />
             <Input
               title="Cell Number"
-              type="number"
+              type="Text"
               detail={details.number}
               property="number"
               setDetails={setDetails}

@@ -78,7 +78,7 @@ export default function BuySell() {
             />
             <Input
               title="Cell Number"
-              type="number"
+              type="Text"
               detail={details.number}
               property="number"
               setDetails={setDetails}
